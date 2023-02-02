@@ -1,0 +1,395 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	position: relative;
+	min-height: 100vh;
+	width: 100%;
+
+}
+/*CONTAINER*/
+.container{
+	width: 100%;
+	min-height: 100vh;
+	position: absolute;
+	background: linear-gradient(to right, #9c27b0, #8ecdff);
+}
+/*MAIN*/
+.main{
+	max-width: 1000px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 15px;
+	overflow: hidden;
+}
+
+/*LOGO*/
+.logo_content .logo i{
+	font-size: 28px;
+	margin-right: 5px;
+}
+.logo_content .logo .logo_name{
+	font-size: 20px;
+	font-weight: 400;
+}
+
+/*HEADER*/
+.header{
+	background-color: #211e63;
+    color: white;
+    padding: 45px;
+}
+
+.header h2{
+	font-size: 35px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin: -48pt 160pt 7pt 0px;
+}
+.header p{
+	font-size: 25px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin: -6pt 234pt -1pt 0px;
+}
+.header img{
+	margin: -16px -4px -4px -10px;
+    width: 130px;
+ 	position: relative;
+}
+/*SIDEBAR*/
+.sidebar{
+	position: fixed;
+	height: 100%;
+	width: 78px;
+	background: #211e63;
+	padding: 6px 14px;
+	top: 0;
+	left: 0;
+	transition: all 0.5s ease;
+}
+.sidebar .logo_content .logo{
+	color: #fff;
+	display: flex;
+	height: 50px;
+	width: 100%;
+	align-items: center;
+	pointer-events: none;
+	opacity: 0;
+}
+
+.sidebar #btn{
+	position: absolute;
+	color: #fff;
+	left: 50%;
+	top: 6px;
+	font-size: 20px;
+	height: 50px;
+	width: 50px;
+	text-align: center;
+	line-height: 50px;
+	transform: translateX(-50%);
+}
+
+.sidebar .linksname{
+	opacity: 0;
+	pointer-events: none;
+	transition: all 0.5s ease;
+	font-size: 18px;
+    text-align: center
+}
+
+.sidebar .profile{
+	opacity: 0;
+	pointer-events: none;
+}
+
+.sidebar ul{
+	margin-top: 20px;
+}
+.sidebar ul li{
+	height: 50px;
+	width: 100%;
+	list-style: none;
+	line-height: 50px;
+	position: relative;
+	margin: 0 5px;
+	border-radius: 12px;
+}
+
+.sidebar ul li .tooltip{
+	position: absolute;
+	left: 180px;
+	top: 0;
+	transform: translate(-50%, -50%);
+	border-radius: 6px;
+	height: 35px;
+	width: 122px;
+	background: #fff;
+	line-height: 35px;
+	text-align: center;
+	transition: 0s;
+	opacity: 0;
+	pointer-events: none;
+	box-shadow: 0 5px 10 px rgba(0, 0, 0, 0.2);
+}
+.sidebar ul li:hover .tooltip{
+	top: 50%;
+	transition: all 0.5s ease;
+	opacity: 1;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.sidebar ul li input{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: 0;
+	border-radius: 12px;
+	outline: none;
+	border: none;
+	background: #1d1b31;
+	padding-left: 50px;
+	font-size: 18px;
+	color: #fff;
+}
+.sidebar ul li a{
+	color: #fff;
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	transition: all 0.4s ease;
+	border-radius: 12px;
+	white-space: nowrap;
+}
+.sidebar ul li a i{
+	border-radius: 12px;
+	height: 50px;
+	min-width: 40px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 22px;
+}
+.sidebar ul li a:hover{
+	background: #fff;
+	color: #11101d;	
+}
+.sidebar ul li i{
+	border-radius: 12px;
+	height: 50px;
+	min-width: 50px;
+	line-height: 50px;
+	text-align: center;
+}
+.sidebar .profile{
+	position: absolute;
+	margin-top: 10px;
+	height: 100%;
+	width: 100%;
+	font-size: 15px;
+	color: #fff;
+	transition: all 0.5 ease;
+}
+
+/*SIDEBAR ACTIVE*/
+.sidebar.active{
+	width: 240px;
+}
+.sidebar.active ~ .main{
+	width: calc(100% - 240px);
+	left: 240px;
+}
+.sidebar.active .logo_content .logo{
+	opacity: 1;
+	pointer-events: none;
+}
+.sidebar.active #btn{
+	left: 90%;
+}
+.sidebar.active .linksname{
+	opacity: 1;
+	pointer-events: auto;
+	transition: all 0.5s ease;
+}
+.sidebar.active .profile{
+	opacity: 1;
+	pointer-events: auto;
+}
+/* untuk content di tengah pada halaman */
+.content-tengah{
+    width: 730px;
+    margin-right: 10px;
+    float: left;
+	text-align: justify;
+}
+/* untuk membuat tabel informasi dalam sidebar kanan */
+.kotak{
+    border: 1px solid gainsboro;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+/* untuk sidebar di kanan pada halaman */
+.content-kanan
+{
+    width: 230px;
+    float: left;
+}
+.sidebar-kiri
+{
+    width: 250px;
+    margin-right: 10px;
+    float: left;
+}
+.kotak h3
+{
+    background-color: #8ecdff;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 13px;
+}
+.kotak h1
+{
+    background-color: #211e63;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    margin-bottom: 13px;
+}
+.kotakk
+{
+    text-align: center;
+}
+.kotak img
+{
+    display: block;
+    width: 100%;
+    margin-bottom: -39px;
+    padding: 55px;
+    margin-top: -53px;
+}
+ 
+.kotak p
+{
+    margin-bottom: 10px;
+}
+/* untuk membuat tabel pada halaman about us dan evaluation */ 
+table
+{
+	width: 100%;
+	border-collapse: collapse;
+	box-shadow: 0 2px 3px 1px #ddd;
+	overflow: hidden;
+	border:1px solid;
+}
+
+.table th
+{
+    vertical-align: top;
+	padding:10px 7px;
+	text-align: center;
+	margin:0;
+	border:1px solid;
+}
+.table td
+{
+    vertical-align: top;
+	padding:10px 7px;
+	text-align: left;
+	margin:0;
+	border:1px solid;
+}
+
+table tbody tr:nth-child(1) 
+{
+    background: #8ecdff; 
+	color: white;
+}
+/* penempatan menampilkan pesan error pada tabel form */
+.eror {
+	color: #FF0000;
+}
+/* untuk mengatur penempatan dan posisi pada tabel form */
+div.judul {
+	text-align: left;
+	font-size: 50px;
+	margin: 0px;
+}
+div.label{
+	margin: 20px;
+}
+div.label input{
+	width: 650px;
+	height: 25px;
+}
+#laki{
+	width: 15px;
+	height: 15px;
+}
+#Perempuan{
+	width: 15px;
+	height: 15px;
+}
+#paket{
+	width: 850px;
+	height: 25px;
+}
+div.label textarea{
+	width: 650px;
+	height: 25px;
+}
+#setuju{
+	width: 15px;
+	height: 15px;
+}
+#reset {
+	width: 120px;
+	height: 32px;
+	background-color: #4B0082;
+	color: white;
+	font-family: tahoma;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: ease-out 0.3s;
+	border: 2px solid white;
+}
+#reset:hover{
+	color: #A2A2A2;
+}
+#submit {
+	width: 120px;
+	height: 32px;
+	background-color: #4B0082;
+	color: white;
+	font-family: tahoma;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: ease-out 0.3s;
+	border: 2px solid white;
+}
+#submit:hover{
+	color: #A2A2A2;
+}
+div.button {
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 20px;
+}
+#tgllahir {
+	width: auto;
+}
+/* untuk footer pada halaman */
+footer
+{
+    clear: both;
+    background-color: #211e63;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}

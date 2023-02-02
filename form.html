@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Form</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<!--box icons link-->
+	<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+	<!--CONTAINER-->
+	<div class="container">
+		<!--MAIN-->
+		<div class="main">
+			<!--HEADER-->
+			<div class="header">
+				<img src="foto/logo.png" alt="logo website">
+				<h2>FROM BOOK TO LIFE</h2>
+            	<p>Share Your Book with Us</p>
+			</div>
+			<!--Content-->
+			<div class="content-tengah">
+                <div class="kotak">
+                    <div class="judul">Formulir Pengiriman Buku</div>
+					<p>Pastikan data yang anda isi benar!</p>
+					<fieldset>
+					<form action="Success.html" method="post" onsubmit="return Validate()" name="form">
+						<div class="label">
+							<b><label for="Nama">Nama lengkap :</label></b><p>
+							<input id="Nama" name="Nama" placeholder="Nama Lengkap" type="text" />
+							<div id="Nama_eror" class="eror"></div>
+						</div>
+						<div class="label">
+							<b>Jenis Kelamin :</b><br><p>
+							<label for="laki">Laki-laki</label>
+							<input type="radio" name="gender" id="laki" value="laki">
+							<label for="Perempuan">Perempuan</label> 
+							<input type="radio" name="gender" id="Perempuan" value="Perempuan">
+							<div id="gender_eror" class="eror"></div>
+						</div>
+						<div class="label">
+							<b><label for="tgllahir">Tanggal lahir :</label></b><p>
+							<input id="tgllahir" name="tgllahir" placeholder="dd-mm-yyyy" type="text"/>
+							<div id="tgllahir_eror" class="eror"></div>
+						</div>
+						<div class="label">
+							<b><label for="alamat">Alamat :</label></b><p>
+							<textarea id="alamat" name="alamat" placeholder="Alamat Lengkap"></textarea>
+							<div id="alamat_eror" class="eror"></div>
+						</div>
+						<div class="label">
+							<b><label for="NoHP">No HP :</label></b><p>
+							<input id="NoHP" name="NoHP" placeholder="08xxxxxxxxxx" type="text" />
+							<div id="Nohp_eror" class="eror"></div>
+						</div>
+						<div class="label">
+							<b><label for="email">Email :</label></b><p>
+							<input id="email" name="email" placeholder="xxxxxxxx@gmail.com" type="text"/>
+							<div id="email_Eror" class="eror"></div>
+						</div>
+						<div class="label">
+							<b><label for="Pengiriman">Pilih metode Pengiriman :</label></b><p>
+							<select name="Pengiriman" id="Pengiriman">
+								<option value="1">Jasa Pengiriman</option>
+								<option value="2">Tanpa Perantara</option>
+							</select>
+						</div>
+						<div class="label">
+							<label for="setuju">Saya setuju dengan <a target="blank" href="syaratdanketentuan.html">syarat dan ketentuan</a> yang berlaku</label>
+							<input id="setuju" type="checkbox" name="setuju">
+							<div id="setuju_eror" class="eror"></div>
+						</div>
+						<div class="button">
+							<button id="reset" type="reset" value="reset">Reset</button>
+							<button id="submit" type="submit" value="submit">Submit</button>
+						</div>
+					</form>
+					</fieldset>
+                </div>
+        	</div>
+			<div class="content-kanan">
+                <div class="kotak">
+                    <b>Metode Pengiriman</b>
+				<hr>
+				<b>Via Jasa pengiriman : </b>
+				<p>Setelah mendaftar pada from pendaftaran, Anda akan menerima email dan SMS yang berisi alamat tujuan pengiriman buku</p>
+				<br>
+				<b>Via Tanpa Perantara : </b>
+				<p>Anda bisa langsung datang ke kantor kami</p>	
+                </div>
+            </div>
+			<!--start footer -->
+            <footer>
+                @Copyright 2022 || DPW2021-2-D01
+            </footer>
+			<!--end footer -->
+		</div>
+	</div>
+	<!--SIDEBAR-->
+	<div class="sidebar">
+		<div class="logo_content">
+			<div class="logo">
+				<i class='bx bx-book-reader' ></i>
+				<div class="logo_name">FBTL</div>
+			</div>
+			<i class='bx bx-menu' id="btn"></i>
+		</div>
+		<!--LIST SIDEBAR-->
+		<ul class="nav-lists">
+			<li>
+				<a href="index.html">
+					<i class='bx bxs-home-alt-2' ></i>
+					<span class="linksname">Home</span>
+				</a>
+				<span class="tooltip">Home</span>
+			</li>
+			<li>
+				<a href="form.html">
+					<i class='bx bx-file' ></i>
+					<span class="linksname">Form</span>
+				</a>
+				<span class="tooltip">Form</span>
+			</li>
+			<li>
+				<a href="evaluation.html">
+					<i class='bx bx-list-check' ></i>
+					<span class="linksname">Evaluation</span>
+				</a>
+				<span class="tooltip">Evaluation</span>
+			</li>
+			<li>
+				<a href="AboutUs.html">
+					<i class='bx bxs-info-circle' ></i>
+					<span class="linksname">About Us</span>
+				</a>
+				<span class="tooltip">About Us</span>
+			</li>	
+		</ul>
+		<!--PROFILE SIDEBAR-->
+		<div class="profile">DPW2021-D01 Project</div>
+	</div>
+	<!--JAVASCRIPT-->
+	<script src="scriptform.js"></script>
+</body>
+</html>
